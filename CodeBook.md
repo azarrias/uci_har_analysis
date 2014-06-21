@@ -43,6 +43,7 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 ## Data Transformations performed by the R script [run_analysis.R](run_analysis.R)
 
 The main objectives of the R script are described in the Outline section of the [README.md](README.md) file. These are the transformations on the data flow from the source to the final tidy data set:
+
 1. First step checks that all necessary source files are present in the expected path, as specified in the Prerequisites section of the [README.md](README.md) file. If any file is not present, the script interrupts its execution.
 2. Read test and train data sets, sub-setting to keep only the columns we are interested in (see later Data Set Columns section)
 3. Merge both test and train data sets
@@ -56,77 +57,80 @@ The main objectives of the R script are described in the Outline section of the 
 
 One of the main goals of the tidy data set is that it had to contain only the mean and standard deviation variables that were estimated from the signals that were measured for the original study (1)
 The following columns / variables have been included in the resulting tidy data set:
-1. activity_name: Activity that the person was performing when the measures were taken (i.e. WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING or LAYING)
-2. subject_id: Numeric ID for the person carrying the smartphone. The experiments were carried out with a group of 30 volunteers within an age bracket of 19-48 years.
+
+1. `activity_name`: Activity that the person was performing when the measures were taken (i.e. WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING or LAYING)
+2. `subject_id`: Numeric ID for the person carrying the smartphone. The experiments were carried out with a group of 30 volunteers within an age bracket of 19-48 years.
+
 The next columns (or variables), from number 3 on, give the mean value of the corresponding measures, for each activity and subject.
 Column names map easily with the original ones from the source data sets, which were taken from the `features.txt` file.
 For a detailed description on the meaning of these column names, please refer to the previous `Source data set features` section of this document, taking into account that the variables present here in the resulting tidy data set are just the mean of the source variables aggregated by activity and subject.
-3. t_body_acc_mean_x
-4. t_body_acc_mean_y
-5. t_body_acc_mean_z
-6. t_body_acc_std_x
-7. t_body_acc_std_y
-8. t_body_acc_std_z
-9. t_gravity_acc_mean_x
-10. t_gravity_acc_mean_y
-11. t_gravity_acc_mean_z 
-12. t_gravity_acc_std_x
-13. t_gravity_acc_std_y
-14. t_gravity_acc_std_z
-15. t_body_acc_jerk_mean_x
-16. t_body_acc_jerk_mean_y
-17. t_body_acc_jerk_mean_z
-18. t_body_acc_jerk_std_x
-19. t_body_acc_jerk_std_y
-20. t_body_acc_jerk_std_z
-21. t_body_gyro_mean_x
-22. t_body_gyro_mean_y
-23. t_body_gyro_mean_z
-24. t_body_gyro_std_x
-25. t_body_gyro_std_y
-26. t_body_gyro_std_z
-27. t_body_gyro_jerk_mean_x
-28. t_body_gyro_jerk_mean_y
-29. t_body_gyro_jerk_mean_z
-30. t_body_gyro_jerk_std_x
-31. t_body_gyro_jerk_std_y
-32. t_body_gyro_jerk_std_z
-33. t_body_acc_mag_mean 
-34. t_body_acc_mag_std
-35. t_gravity_acc_mag_mean
-36. t_gravity_acc_mag_std
-37. t_body_acc_jerk_mag_mean 
-38. t_body_acc_jerk_mag_std
-39. t_body_gyro_mag_mean
-40. t_body_gyro_mag_std
-41. t_body_gyro_jerk_mag_mean
-42. t_body_gyro_jerk_mag_std
-43. f_body_acc_mean_x
-44. f_body_acc_mean_y
-45. f_body_acc_mean_z 
-46. f_body_acc_std_x
-47. f_body_acc_std_y
-48. f_body_acc_std_z
-49. f_body_acc_jerk_mean_x
-50. f_body_acc_jerk_mean_y
-51. f_body_acc_jerk_mean_z
-52. f_body_acc_jerk_std_x
-53. f_body_acc_jerk_std_y
-54. f_body_acc_jerk_std_z
-55. f_body_gyro_mean_x
-56. f_body_gyro_mean_y
-57. f_body_gyro_mean_z
-58. f_body_gyro_std_x
-59. f_body_gyro_std_y
-60. f_body_gyro_std_z
-61. f_body_acc_mag_mean
-62. f_body_acc_mag_std
-63. f_body_body_acc_jerk_mag_mean
-64. f_body_body_acc_jerk_mag_std
-65. f_body_body_gyro_mag_mean
-66. f_body_body_gyro_mag_std
-67. f_body_body_gyro_jerk_mag_mean
-68. f_body_body_gyro_jerk_mag_std
+
+3. `t_body_acc_mean_x`
+4. `t_body_acc_mean_y`
+5. `t_body_acc_mean_z`
+6. `t_body_acc_std_x`
+7. `t_body_acc_std_y`
+8. `t_body_acc_std_z`
+9. `t_gravity_acc_mean_x`
+10. `t_gravity_acc_mean_y`
+11. `t_gravity_acc_mean_z` 
+12. `t_gravity_acc_std_x`
+13. `t_gravity_acc_std_y`
+14. `t_gravity_acc_std_z`
+15. `t_body_acc_jerk_mean_x`
+16. `t_body_acc_jerk_mean_y`
+17. `t_body_acc_jerk_mean_z`
+18. `t_body_acc_jerk_std_x`
+19. `t_body_acc_jerk_std_y`
+20. `t_body_acc_jerk_std_z`
+21. `t_body_gyro_mean_x`
+22. `t_body_gyro_mean_y`
+23. `t_body_gyro_mean_z`
+24. `t_body_gyro_std_x`
+25. `t_body_gyro_std_y`
+26. `t_body_gyro_std_z`
+27. `t_body_gyro_jerk_mean_x`
+28. `t_body_gyro_jerk_mean_y`
+29. `t_body_gyro_jerk_mean_z`
+30. `t_body_gyro_jerk_std_x`
+31. `t_body_gyro_jerk_std_y`
+32. `t_body_gyro_jerk_std_z`
+33. `t_body_acc_mag_mean` 
+34. `t_body_acc_mag_std`
+35. `t_gravity_acc_mag_mean`
+36. `t_gravity_acc_mag_std`
+37. `t_body_acc_jerk_mag_mean` 
+38. `t_body_acc_jerk_mag_std`
+39. `t_body_gyro_mag_mean`
+40. `t_body_gyro_mag_std`
+41. `t_body_gyro_jerk_mag_mean`
+42. `t_body_gyro_jerk_mag_std`
+43. `f_body_acc_mean_x`
+44. `f_body_acc_mean_y`
+45. `f_body_acc_mean_z` 
+46. `f_body_acc_std_x`
+47. `f_body_acc_std_y`
+48. `f_body_acc_std_z`
+49. `f_body_acc_jerk_mean_x`
+50. `f_body_acc_jerk_mean_y`
+51. `f_body_acc_jerk_mean_z`
+52. `f_body_acc_jerk_std_x`
+53. `f_body_acc_jerk_std_y`
+54. `f_body_acc_jerk_std_z`
+55. `f_body_gyro_mean_x`
+56. `f_body_gyro_mean_y`
+57. `f_body_gyro_mean_z`
+58. `f_body_gyro_std_x`
+59. `f_body_gyro_std_y`
+60. `f_body_gyro_std_z`
+61. `f_body_acc_mag_mean`
+62. `f_body_acc_mag_std`
+63. `f_body_body_acc_jerk_mag_mean`
+64. `f_body_body_acc_jerk_mag_std`
+65. `f_body_body_gyro_mag_mean`
+66. `f_body_body_gyro_mag_std`
+67. `f_body_body_gyro_jerk_mag_mean`
+68. `f_body_body_gyro_jerk_mag_std`
 
 
 (1) _Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012_

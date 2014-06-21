@@ -21,12 +21,12 @@ The [run_analysis.R](run_analysis.R) script on this repo:
 	- `~/UCI HAR Dataset/features.txt`
 	- `~/UCI HAR Dataset/features_info.txt`
 	- `~/UCI HAR Dataset/README.txt`
-	- `~/UCI HAR Dataset/test/subject_test.txt
-	- `~/UCI HAR Dataset/test/X_test.txt
-	- `~/UCI HAR Dataset/test/y_test.txt
-	- `~/UCI HAR Dataset/train/subject_train.txt
-	- `~/UCI HAR Dataset/train/X_train.txt
-	- `~/UCI HAR Dataset/train/y_train.txt	
+	- `~/UCI HAR Dataset/test/subject_test.txt`
+	- `~/UCI HAR Dataset/test/X_test.txt`
+	- `~/UCI HAR Dataset/test/y_test.txt`
+	- `~/UCI HAR Dataset/train/subject_train.txt`
+	- `~/UCI HAR Dataset/train/X_train.txt`
+	- `~/UCI HAR Dataset/train/y_train.txt`
 - It's critical to have this tree file structure before running the script, otherwise it won't work as expected. There are some other files contained in the .zip file, but these are not used by the R script.
 - Open the R console and change the working directory using the `setwd(dir)` command (type `?setwd` in case you need any help)
 - Load the script: `source("run_analysis.R")`
