@@ -43,8 +43,11 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 ## Data Transformations performed by the R script [run_analysis.R](run_analysis.R)
 
 The main objectives of the R script are described in the Outline section of the [README.md](README.md) file. These are the transformations on the data flow from the source to the final tidy data set:
+
 1. First step checks that all necessary source files are present in the expected path, as specified in the Prerequisites section of the [README.md](README.md) file. If any file is not present, the script interrupts its execution.
+
 2. Read test and train data sets, sub-setting to keep only the columns we are interested in (see later Data Set Columns section)
+
 3. Merge both test and train data sets
 4. Merge the resulting data set with the activity labels, to substitute the activity IDs with descriptive activity names
 5. Label data set columns with descriptive names (see later Data Set Columns section)
