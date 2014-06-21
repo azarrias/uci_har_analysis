@@ -61,9 +61,9 @@ The following columns / variables have been included in the resulting tidy data 
 1. `activity_name`: Activity that the person was performing when the measures were taken (i.e. WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING or LAYING)
 2. `subject_id`: Numeric ID for the person carrying the smartphone. The experiments were carried out with a group of 30 volunteers within an age bracket of 19-48 years.
 
-The next columns (or variables), from number 3 on, give the mean value of the corresponding measures, for each activity and subject.
-Column names map easily with the original ones from the source data sets, which were taken from the `features.txt` file.
-For a detailed description on the meaning of these column names, please refer to the previous `Source data set features` section of this document, taking into account that the variables present here in the resulting tidy data set are just the mean of the source variables aggregated by activity and subject.
+	The next columns (or variables), from number 3 on, give the mean value of the corresponding measures, for each activity and subject.
+	Column names map easily with the original ones from the source data sets, which were taken from the `features.txt` file.
+	For a detailed description on the meaning of these column names, please refer to the previous `Source data set features` section of this document, taking into account that the variables present here in the resulting tidy data set are just the mean of the source variables aggregated by activity and subject.
 
 3. `t_body_acc_mean_x`
 4. `t_body_acc_mean_y`
